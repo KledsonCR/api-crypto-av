@@ -1,0 +1,33 @@
+{
+  "name": "crypto-api",
+  "version": "1.0.0",
+  "description": "api-de-carteira-de-moedas-av",
+  "main": "./api/index.js",
+  "scripts": {
+    "start": "nodemon ./api/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KledsonCR/api-crypto-av.git"
+  },
+  "author": "kledson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KledsonCR/api-crypto-av/issues"
+  },
+  "homepage": "https://github.com/KledsonCR/api-crypto-av#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "moment": "^2.29.3",
+    "mysql2": "^2.3.3",
+    "path": "^0.12.7",
+    "sequelize": "^6.19.0",
+    "sequelize-cli": "^6.4.1"
+  },
+  "devDependencies": {
+    "git-commit-msg-linter": "^4.1.2",
+    "nodemon": "^2.0.16"
+  }
+}
