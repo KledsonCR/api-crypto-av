@@ -23,6 +23,16 @@ class WalletController {
           return res.status(400).json(error.message)
         }
     }
+
+    static async criaWallet(req, res) {
+      const novaWallet = req.body 
+      try {
+        const novaWalletCriada = await database.wallet.create(novaWallet)
+        return res.status(201).json(novaWalletCriada)
+      } catch (error) {
+        return res.status(500).json(error.message)
+      }
+    }
 }
 
 module.exports = WalletController
