@@ -33,6 +33,29 @@ class WalletController {
         return res.status(500).json(error.message)
       }
     }
+
+    static async atualizaWallet(req, res) {
+      const { id } = req.params
+      const novosDados = req.body 
+      try {
+        await database.wallet.update(novosDados, { where: { id: Number(id) }})
+        const walletAtualizada = await database.wallet.findOne( { where: { id: Number(id) }})
+        return res.status(200).json(walletAtualizada)
+      } catch (error) {
+        return res.status(500).json(error.message)
+    }
+  }
+
+  static async deletaWallet(req, res){
+    const { id } = req.params
+    try{
+      await database.wallet.destroy( { where: { id: Number(id) }})
+      return res.status(200).json( { msg: `id ${id} deletado!` })
+     } catch (error){
+      return res.status (500).json (error.message)
+    }
+  }
+
 }
 
 module.exports = WalletController
