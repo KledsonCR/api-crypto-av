@@ -2,7 +2,7 @@
 
 *Propósito do desafio é construir uma API de carteira de criptomoedas.*
 
-## 🛠️ Ferramentas utilizadas na aplicação do desenvolvimento 
+## 🛠️ Ferramentas utilizadas no desenvolvimento da aplicação  
 
 * [VSCode] - Editor de código
 * [Postman] - Para realizar o teste de rotas por meio de métodos HTTP
