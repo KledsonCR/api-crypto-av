@@ -8,15 +8,15 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      coin_id: {
-        allowNull: false,
-        type: Sequelize.INTEGER,
-        references: { model: 'coins', key: 'id' }
-      },
       wallet_id: {
         allowNull: false,
         type: Sequelize.INTEGER,
         references: { model: 'wallets', key: 'address' }
+      },
+      coin_id: {
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references: { model: 'coins', key: 'id' }
       },
       value: {
         type: Sequelize.DOUBLE
