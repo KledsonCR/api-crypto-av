@@ -4,11 +4,11 @@
 
 ## 🛠️ Ferramentas utilizadas na aplicação do desenvolvimento 
 
-* [VSCode] Editor de código
-* [Postman] Para realizar o teste de rotas por meio de métodos HTTP
-* [NodeJS] Para executar o JavaScript no Backend
-* [GIT] Para versionamento de código
-* [MySQL] SGBD - Banco de dados relacional
+* [VSCode] - Editor de código
+* [Postman] - Para realizar o teste de rotas por meio de métodos HTTP
+* [NodeJS] - Para executar o JavaScript no Backend
+* [GIT] - Para versionamento de código
+* [MySQL] - SGBD - Banco de dados relacional
 
 ## ⚙️ Executando a aplicação
 
