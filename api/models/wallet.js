@@ -26,13 +26,37 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true,
       primaryKey: true
     },
-    
-    name: DataTypes.STRING,
-    cpf: DataTypes.STRING,
-    birthdate: DataTypes.DATEONLY
-  }, {
-    sequelize,
-    modelName: 'wallet',
-  });
-  return wallet;
-};
+
+    name: {
+      type: DataTypes.STRING,
+      validate: {
+         funcaoValidar: function(dado) {
+           if (dado.length < 7) throw new Error('Nome deve ter pelo menos 7 caracteres')
+         }
+       }
+    },
+    cpf: { 
+    type:DataTypes.STRING,
+    unique: true,
+    validate: {
+      is: {
+        args: /^\d{3}\.\d{3}\.\d{3}\-\d{2}$/,
+        msg: 'O cpf não possui um formato válido'
+          },
+       }
+    },
+    birthdate: {
+      type: DataTypes.DATEONLY,
+      validate: {
+            isBefore: {
+              args: '2004-01-01',
+              msg: 'Deve ter pelo menos 18 anos'
+            }
+          }
+        }
+      }, {
+        sequelize,
+        modelName: 'wallet',
+      });
+      return wallet;
+    };
